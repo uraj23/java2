@@ -9,7 +9,7 @@ public class CountWords {
      int count=1;
      for(int i=0;i<s.length();i++)
      {
-    	 if(s.charAt(i)==' ' && s.charAt(i+1)!=' ')
+    	 if((i==0 &&s.charAt(i)!=' ')||( s.charAt(i)!=' '&& s.charAt(i-1)==' '))
     	 {
     		count++; 
     	 }
@@ -17,16 +17,7 @@ public class CountWords {
      System.out.println(count);
      
      
-     String [] s1=s.split(" ");
-     int count1=1;
-     for(int i=0;i<s1.length;i++)
-     {
-    	
-    	 
-    		 count1++;
-    	 
-     }
-     System.out.println(count1);
+     
 
 	}
 
